@@ -29,6 +29,7 @@ class Model {
                 return
             }
             do {
+                // Parsing the data into video objects
                 let decoder = JSONDecoder()
                 decoder.dateDecodingStrategy = .iso8601
                 
@@ -43,7 +44,7 @@ class Model {
                 dump(response)
             }
             catch {
-                print("Error")
+                print("Error response")
             }
             
         }
