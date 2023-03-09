@@ -59,17 +59,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         // Configure the cell with the data
         let video = self.videos[indexPath.row]
-        
         cell.setCell(video)
-        
         return cell
-        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
     }
-
-
 }
 

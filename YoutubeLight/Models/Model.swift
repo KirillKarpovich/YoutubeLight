@@ -46,7 +46,6 @@ class Model {
             catch {
                 print("Error response")
             }
-            
         }
         dataTask.resume()
     }

@@ -17,7 +17,6 @@ class VideoTableViewCell: UITableViewCell {
     
     var video:Video?
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -43,7 +42,6 @@ class VideoTableViewCell: UITableViewCell {
         self.dateLabel.text = df.string(from: video!.publishedAt)
         
         guard self.video?.thumbnail != "" else { return }
-        
         
         // Check cache before downloading data
         if let cachedData = CacheManager.getVideoCache(self.video!.thumbnail){
@@ -72,8 +70,6 @@ class VideoTableViewCell: UITableViewCell {
                     // Video cell has been recycled for another video and no longer matches the thumbnail that was downloaded
                     return
                 }
-                
-               
                 DispatchQueue.main.async {
                     // Create the image object
                     let image = UIImage(data: data!)
@@ -87,5 +83,4 @@ class VideoTableViewCell: UITableViewCell {
         // Start data task
         dataTask.resume()
     }
-
 }

@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 class CacheManager {
     
     static var cache = [String:Data]()
@@ -22,6 +21,6 @@ class CacheManager {
         
         // Try to get a data to the specified url
         return cache[url]
-        
+
     }
 }

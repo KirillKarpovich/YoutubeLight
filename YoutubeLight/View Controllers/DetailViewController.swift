@@ -31,8 +31,6 @@ class DetailViewController: UIViewController {
         textView.text = ""
 
         // Check if there is a video
-        
-        
         guard video != nil else { return }
         
         //Create a embed URL
@@ -53,11 +51,5 @@ class DetailViewController: UIViewController {
        
         //Set the description
         textView.text = video!.description
-        
-        
     }
-    
-
-    
-
 }
